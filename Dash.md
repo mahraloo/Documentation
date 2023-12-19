@@ -52,7 +52,7 @@ Another benefit of this approach is that future sessions can use the pre-compute
     Another way to do this is to save the data in a cache along with a session ID and then reference the data using that session ID. Because data is saved on the server instead of transported over the network, this method is generally faster than the dcc.Store method.
 
 
-## Acknowledgements
+## Requirements
 
  - [Redis](https://redis.io/)
  - [Flask-cashing](https://flask-caching.readthedocs.io/en/latest/)

@@ -60,7 +60,7 @@ I'm a tech buff (:
 
 ## 🔗 Links
 [![source](https://img.shields.io/badge/source-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://dash.plotly.com/sharing-data-between-callbacks)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/aminloo07)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]([www.linkedin.com/in/aminloo07](https://www.linkedin.com/in/aminloo07/)https://www.linkedin.com/in/aminloo07/)
 
 
 

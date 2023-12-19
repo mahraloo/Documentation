@@ -31,14 +31,12 @@ To save data in the user's browser's session:
     - This method doesn't increase the memory footprint of the app.
     - There could be a cost in network traffic. If you're sharing 10MB of data between callbacks, then that data will be transported over the network between each callback.
     - If the network cost is too high, then compute the aggregations upfront and transport those. Your app likely won't be displaying 10MB of data, it will just be displaying a subset or an aggregation of it
-
-- Example 2 - Computing Aggregations Upfront
+  ### Example 2 - Computing Aggregations Upfront
     Sending the computed data over the network can be expensive if the data is large. In some cases, serializing this data to JSON can also be expensive.
 
     In many cases, your app will only display a subset or an aggregation of the processed data. In these cases, you could precompute the aggregations in your data processing callback and transport these aggregations to the remaining callbacks.
 
-
-- Example 3 - Caching and Signaling
+### Example 3 - Caching and Signaling
     - Uses Redis via Flask-Cache for storing “global variables” on the server-side in a database. This data is accessed through a function (global_store()), the output of which is cached and keyed by its input arguments.
     - Uses the dcc.Store solution to send a signal to the other callbacks when the expensive computation is complete.
     - Note that instead of Redis, you could also save this to the file system

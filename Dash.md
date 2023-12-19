@@ -2,6 +2,7 @@
 # Sharing Data Between Callbacks
 
 - Dash was designed to be a stateless framework
+    - stateless has no memory or knowledge of previous calls or requests
 
 
 ## Share State

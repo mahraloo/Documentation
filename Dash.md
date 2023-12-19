@@ -37,10 +37,10 @@ To save data in the user's browser's session:
     In many cases, your app will only display a subset or an aggregation of the processed data. In these cases, you could precompute the aggregations in your data processing callback and transport these aggregations to the remaining callbacks.
 
 ### Example 3 - Caching and Signaling
-    - Uses Redis via Flask-Cache for storing “global variables” on the server-side in a database. This data is accessed through a function (global_store()), the output of which is cached and keyed by its input arguments.
-    - Uses the dcc.Store solution to send a signal to the other callbacks when the expensive computation is complete.
-    - Note that instead of Redis, you could also save this to the file system
-    - This “signaling” is performant because it allows the expensive computation to only take up one process and be performed once. Without this type of signaling, each callback could end up computing the expensive computation in parallel, locking four processes instead of one.
+- Uses Redis via Flask-Cache for storing “global variables” on the server-side in a database. This data is accessed through a function (global_store()), the output of which is cached and keyed by its input arguments.
+- Uses the dcc.Store solution to send a signal to the other callbacks when the expensive computation is complete.
+- Note that instead of Redis, you could also save this to the file system
+- This “signaling” is performant because it allows the expensive computation to only take up one process and be performed once. Without this type of signaling, each callback could end up computing the expensive computation in parallel, locking four processes instead of one.
 Another benefit of this approach is that future sessions can use the pre-computed value. This will work well for apps that have a small number of inputs.
 - Example 4 - User-Based Session Data on the Server
     The previous example cached computations in a way that was accessible for all users.
